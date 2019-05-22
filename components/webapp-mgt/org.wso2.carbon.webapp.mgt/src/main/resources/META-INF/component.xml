@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
  ~ Copyright (c) 2005-2010, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
  ~
@@ -26,11 +27,11 @@
 
     <ManagementPermissions>
         <ManagementPermission>
-            <DisplayName>Webapps</DisplayName>
+            <DisplayName>Web应用</DisplayName>
             <ResourceId>/permission/admin/manage/add/webapp</ResourceId>
         </ManagementPermission>
         <ManagementPermission>
-            <DisplayName>Webapps</DisplayName>
+            <DisplayName>Web应用</DisplayName>
             <ResourceId>/permission/admin/manage/modify/webapp</ResourceId>
         </ManagementPermission>
     </ManagementPermissions>
