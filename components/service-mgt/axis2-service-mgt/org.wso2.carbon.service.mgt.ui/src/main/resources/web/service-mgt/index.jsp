@@ -15,6 +15,7 @@
  ~ specific language governing permissions and limitations
  ~ under the License.
  -->
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page import="org.apache.axis2.context.ConfigurationContext" %>
 <%@ page import="org.wso2.carbon.CarbonConstants" %>
@@ -309,7 +310,7 @@ padding:0 10px;
         <tr>
             <td style="border:0; !important">&nbsp;</td>
         </tr>
-        <tr>  
+        <tr>
             <td>
                 <table style="border:0; !important">
                 <tbody>
@@ -335,7 +336,7 @@ padding:0 10px;
                                 </option>
                                 <%
                                 } else {
-                                %>                           
+                                %>
                                 <option value="<%= serviceType%>"><%= stn.convertString(serviceType) %>
                                 </option>
                                 <%
@@ -482,8 +483,8 @@ padding:0 10px;
             <td style="text-align:left;" width="10px">
                 <nobr>
                     <%= service.getSecurityScenarioId() != null ?
-                        "<img src='images/secured.gif' title='Secured using "+ service.getSecurityScenarioId() +"'>Secured" :
-                        "<img src='images/unsecured.gif' title='Unsecured'>Unsecured"
+                        "<img src='images/secured.gif' title='安全使用 "+ service.getSecurityScenarioId() +"'>安全的" :
+                        "<img src='images/unsecured.gif' title='不安全的'>不安全的"
                     %>
                  </nobr>
             </td>
@@ -526,7 +527,7 @@ padding:0 10px;
                        target="_self">
                         <fmt:message key="download"/>
                     </a>
-                </nobr>        
+                </nobr>
                 <% } else { %>
                         &nbsp;
                 <% } %>
@@ -540,13 +541,13 @@ padding:0 10px;
                 <jsp:include page="<%= cApp_edit%>"/>
             <% } else { %>
             <td>
-                <a title="Edit '<%=Encode.forHtmlAttribute(service.getName())%>' in the design view" href="#" onclick="editPS('<%=Encode.forHtmlAttribute(service.getName())%>');return false;">
-                    <img src="../proxyservices/images/design-view.gif" alt="" border="0"> Design View</a>
+                <a title="在设计视图中编辑 '<%=Encode.forHtmlAttribute(service.getName())%>'" href="#" onclick="editPS('<%=Encode.forHtmlAttribute(service.getName())%>');return false;">
+                    <img src="../proxyservices/images/design-view.gif" alt="" border="0"> 设计视图</a>
             </td>
             <td>
-                <a title="Edit '<%=Encode.forHtmlAttribute(service.getName())%>' in the source view editor"
+                <a title="在代码编辑器中编辑 '<%=Encode.forHtmlAttribute(service.getName())%>' "
                    style="background-image: url(../proxyservices/images/source-view.gif);"
-                   class="icon-link" onclick="editProxySourceView('<%=Encode.forHtmlAttribute(service.getName())%>')" href="#">Source View</a>
+                   class="icon-link" onclick="editProxySourceView('<%=Encode.forHtmlAttribute(service.getName())%>')" href="#">代码视图</a>
             </td>
             <% } %>
 
@@ -601,4 +602,4 @@ padding:0 10px;
 
 </div>
 </div>
-</fmt:bundle>   
+</fmt:bundle>

@@ -15,6 +15,7 @@
  ~ specific language governing permissions and limitations
  ~ under the License.
  -->
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri="http://wso2.org/projects/carbon/taglibs/carbontags.jar" prefix="carbon" %>
 <%@ page import="org.wso2.carbon.service.mgt.ui.ServiceAdminClient" %>
@@ -101,11 +102,11 @@
                             url: "../urlmapper/index.jsp",
                             data: "type=add&carbonEndpoint=" + myepr,
                             success: function(msg){
-                               
+
                             }
                         });
-    }   
-</script> 
+    }
+</script>
 <!--<script type="text/javascript">
  /*function add(myepr){
         CARBON.showInputDialog("Enter Service Specification identifier :\n",function(inputVal){
@@ -269,9 +270,9 @@
                 <tr>
                     <td colspan="2"><%=epr%>
                     </td>
-                 
+
                 </tr>
-                   
+
                             <!--<tr>
                                 <td  width="50%"><%--=epr--%>
                                 </td>
@@ -295,22 +296,22 @@
                     }%>
                     <tr>
                     <%
-                  
+
                         if(CarbonUIUtil.isContextRegistered(config, "/urlmapper/")){ %>
-                         
+
                               <td colspan="2"><nobr>
                             <a class="icon-link" style="background-image: url(images/url-rewrite.png);"
     href="../urlmapper/index.jsp?carbonEndpoint=<%=carbonEndpoint%>&apptype=service"
                             >
-                                URL Mappings
+                                URL 映射
                             </a></nobr>
                         </td>
-                           
-                               <% 
-                      
+
+                               <%
+
                        			 }
                				   %>
-                </tr> <% 
+                </tr> <%
                 } else {
             %>
             <tr>
@@ -321,7 +322,7 @@
             <%
                 }
             %>
-           
+
         </table>
         </div>
     </td>

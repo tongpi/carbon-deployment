@@ -245,7 +245,7 @@
         <tr>
             <td style="border:0; !important">&nbsp;</td>
         </tr>
-        <tr>  
+        <tr>
             <td>
             <table style="border:0; !important">
                 <tbody>
