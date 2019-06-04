@@ -2,9 +2,9 @@ function validate() {
     if(document.marUpload.marFilename.value  != null) {
         var jarinput = document.marUpload.marFilename.value;
         if (jarinput == '') {
-            CARBON.showWarningDialog('Please select required fields to upload a module');
+            CARBON.showWarningDialog('请填写或选择必需的字段以便上传模块');
         } else if (jarinput.lastIndexOf(".mar") == -1) {
-            CARBON.showWarningDialog('Please select a .mar file');
+            CARBON.showWarningDialog('请选择一个 .mar 文件');
         } else {
             document.marUpload.submit();
         }
@@ -13,12 +13,12 @@ function validate() {
         for (var i=0; i<document.marUpload.marFilename.length; i++) {
             var jarinput = document.marUpload.marFilename[i].value;
             if (jarinput == '') {
-                CARBON.showWarningDialog('Please select required fields to upload a module');
+                CARBON.showWarningDialog('请填写或选择必需的字段以便上传模块');
                 validFileNames = false; break;
             } else if (jarinput.lastIndexOf(".mar") == -1) {
-                CARBON.showWarningDialog('Please select a .mar file');
+                CARBON.showWarningDialog('请选择一个 .mar 文件');
                 validFileNames = false; break;
-            } 
+            }
         }
     }
 
@@ -65,7 +65,7 @@ function addRow() {
     newRow.id = 'file' + rows;
 
     var oCell = newRow.insertCell(-1);
-    oCell.innerHTML = '<label>Module Archive (.mar)<font color="red">*</font></label>';
+    oCell.innerHTML = '<label>模块归档文件(.mar)<font color="red">*</font></label>';
     oCell.className = "formRow";
 
     oCell = newRow.insertCell(-1);

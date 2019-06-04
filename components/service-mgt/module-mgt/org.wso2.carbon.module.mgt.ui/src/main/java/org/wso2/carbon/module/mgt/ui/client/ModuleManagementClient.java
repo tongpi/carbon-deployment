@@ -62,8 +62,8 @@ public class ModuleManagementClient {
         try {
             return stub.getModuleInfo(moduleName, moduleVersion);
         } catch (RemoteException e) {
-            String msg = "Cannot get info about " + moduleName
-                    + " . Backend service may be unvailable";
+            String msg = "不能得到模块 " + moduleName
+                    + " 的信息. 后端服务可能不可用";
             handleException(msg, e);
         }
         return null;
@@ -74,8 +74,8 @@ public class ModuleManagementClient {
         try {
             stub.uploadModule(moduleUploadData);
         } catch (RemoteException e) {
-            String msg = "Cannot upload the modules "
-                         + " . Backend service may be unvailable";
+            String msg = "不能上传模块 "
+                         + " . 后端服务可能不可用";
             handleException(msg, e);
         }
     }
@@ -84,7 +84,7 @@ public class ModuleManagementClient {
         try {
             return stub.listModules();
         } catch (RemoteException e) {
-            String msg = "Cannot list modules. Backend service may be unvailable";
+            String msg = "不能列表模块. 后端服务可能不可用";
             handleException(msg, e);
         }
         return null;
@@ -95,7 +95,7 @@ public class ModuleManagementClient {
         try {
             return stub.listModulesForOperation(serviceName, operationName);
         } catch (RemoteException e) {
-            String msg = "Cannot list modules for service. Backend service may be unvailable";
+            String msg = "不能列表服务的模块. 后端服务可能不可用";
             handleException(msg, e);
         }
         return null;
@@ -106,7 +106,7 @@ public class ModuleManagementClient {
         try {
             return stub.listModulesForService(serviceName);
         } catch (RemoteException e) {
-            String msg = "Cannot list modules for service. Backend service may be unvailable";
+            String msg = "不能列表服务的模块. 后端服务可能不可用";
             handleException(msg, e);
         }
         return null;
@@ -117,7 +117,7 @@ public class ModuleManagementClient {
         try {
             return stub.listModulesForServiceGroup(serviceGroupName);
         } catch (RemoteException e) {
-            String msg = "Cannot list modules for service group. Backend service may be unvailable";
+            String msg = "不能列表服务组的模块. 后端服务可能不可用";
             handleException(msg, e);
         }
         return null;
@@ -128,7 +128,7 @@ public class ModuleManagementClient {
         try {
             return stub.listGloballyEngagedModules();
         } catch (RemoteException e) {
-            String msg = "Cannot list modules. Backend service may be unvailable";
+            String msg = "不能列表模块. 后端服务可能不可用";
             handleException(msg, e);
         }
         return null;
@@ -139,7 +139,7 @@ public class ModuleManagementClient {
         try {
             return stub.globallyEngageModule(moduleId);
         } catch (RemoteException e) {
-            String msg = "Cannot globally engage module. Backend service may be unvailable";
+            String msg = "不能全局插接模块. 后端服务可能不可用";
             handleException(msg, e);
         }
         return false;
@@ -150,7 +150,7 @@ public class ModuleManagementClient {
         try {
             return stub.globallyDisengageModule(moduleId);
         } catch (RemoteException e) {
-            String msg = "Cannot globally disengage module. Backend service may be unvailable";
+            String msg = "不能全局脱离模块. 后端服务可能不可用";
             handleException(msg, e);
         }
         return false;
@@ -161,7 +161,7 @@ public class ModuleManagementClient {
         try {
             return stub.engageModuleForOperation(moduleId, serviceName, operationName);
         } catch (RemoteException e) {
-            String msg = "Cannot engage module. Backend service may be unvailable";
+            String msg = "不能插接模块. 后端服务可能不可用";
             handleException(msg, e);
         }
         return false;
@@ -172,7 +172,7 @@ public class ModuleManagementClient {
         try {
             return stub.disengageModuleForOperation(moduleId, serviceName, operationName);
         } catch (RemoteException e) {
-            String msg = "Cannot disengage module. Backend service may be unvailable";
+            String msg = "不能脱离模块. 后端服务可能不可用";
             handleException(msg, e);
         }
         return false;
@@ -183,7 +183,7 @@ public class ModuleManagementClient {
         try {
             return stub.engageModuleForService(moduleId, serviceName);
         } catch (RemoteException e) {
-            String msg = "Cannot engage module. Backend service may be unvailable";
+            String msg = "无法插接模块. 后端服务可能不可用";
             handleException(msg, e);
         }
         return false;
@@ -194,7 +194,7 @@ public class ModuleManagementClient {
         try {
             return stub.disengageModuleForService(moduleId, serviceName);
         } catch (RemoteException e) {
-            String msg = "Cannot disengage module. Backend service may be unvailable";
+            String msg = "不能脱离模块. 后端服务可能不可用";
             handleException(msg, e);
         }
         return false;
@@ -205,7 +205,7 @@ public class ModuleManagementClient {
         try {
             return stub.engageModuleForServiceGroup(moduleId, serviceGroup);
         } catch (RemoteException e) {
-            String msg = "Cannot engage module. Backend service may be unvailable";
+            String msg = "无法插接模块. 后端服务可能不可用";
             handleException(msg, e);
         }
         return false;
@@ -216,7 +216,7 @@ public class ModuleManagementClient {
         try {
             return stub.disengageModuleForServiceGroup(moduleId, serviceGroup);
         } catch (RemoteException e) {
-            String msg = "Cannot disengage module. Backend service may be unvailable";
+            String msg = "不能脱离模块. 后端服务可能不可用";
             handleException(msg, e);
         }
         return false;
@@ -227,7 +227,7 @@ public class ModuleManagementClient {
         try {
             stub.setModuleParameters(moduleName, moduleVersion, params.toArray(new String[params.size()]));
         } catch (RemoteException e) {
-            String msg = "Cannot set module parameters. Backend service may be unvailable";
+            String msg = "不能设置模块参数. 后端服务可能不可用";
             handleException(msg, e);
         }
     }
@@ -259,7 +259,7 @@ public class ModuleManagementClient {
                 }
             }
         } catch (Exception e) {
-            String msg = "Could not get module parameters for service: " + moduleName + ":" + moduleVersion;
+            String msg = "不能得到服务的模块参数: " + moduleName + ":" + moduleVersion;
             handleException(msg, e);
         }
 
@@ -270,7 +270,7 @@ public class ModuleManagementClient {
         try {
             return stub.removeModule(moduleId);
         } catch (RemoteException e) {
-            String msg = "Cannot remove module. Backend service may be unvailable";
+            String msg = "不能移除模块. 后端服务可能不可用";
             handleException(msg, e);
         }
         return null;
@@ -281,7 +281,7 @@ public class ModuleManagementClient {
         try {
             return stub.removeModuleParameter(moduleName,moduleVersion,paramName);
         } catch (RemoteException e) {
-            String msg = "Cannot get module parameters. Backend service may be unvailable";
+            String msg = "不能得到模块参数. 后端服务可能不可用";
             handleException(msg, e);
         }
         return null;

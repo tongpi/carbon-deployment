@@ -67,8 +67,8 @@ public class ModuleFileUploadExecutor extends AbstractFileUploadExecutor {
                 String fileName = getFileName(fieldData.getFileItem().getName());
                 checkServiceFileExtensionValidity(fileName, ALLOWED_FILE_EXTENSIONS);
                 if (!fileName.endsWith(".mar")) {
-                    throw new CarbonException("File with extension " + fileName
-                                              + " is not supported!");
+                    throw new CarbonException("不支持文件 " + fileName
+                                              + " 的扩展名!");
                 } else {
                     ModuleUploadData tempModuleData = new ModuleUploadData();
                     tempModuleData.setDataHandler(fieldData.getDataHandler());
